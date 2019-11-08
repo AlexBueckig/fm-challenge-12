@@ -1,0 +1,69 @@
+.testimonials {
+  margin: 0 1em 10em;
+
+  &::before {
+    content: '';
+    display: block;
+    background: url(../images/bg-quotes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 0.25em;
+    width: 55px;
+    height: 18px;
+  }
+}
+
+.testimonial {
+  background: map-get($map: $colors-primary, $key: dark-blue-testiomonials);
+  border-radius: 5px;
+  padding: 2em 1.5em 1.5em;
+  margin-bottom: 4em;
+  box-shadow: 5px 5px 10px rgba(black, 0.15);
+
+  &__footer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 'avatar name' 'avatar job';
+    align-items: center;
+    gap: 0 0.5em;
+    margin-top: 1.25em;
+  }
+
+  &__avatar {
+    grid-area: avatar;
+    border-radius: 50px;
+    width: 30px;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__job {
+    grid-area: job;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .testimonials {
+    display: flex;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      position: absolute;
+      top: -2rem;
+      left: -1rem;
+      width: 100px;
+      height: 40px;
+      z-index: -1;
+    }
+  }
+
+  .testimonial {
+    padding: 3em 2em 2.5em;
+    &:not(:last-of-type) {
+      margin-right: 3em;
+    }
+  }
+}

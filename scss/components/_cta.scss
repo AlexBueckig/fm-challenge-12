@@ -1,0 +1,52 @@
+.cta {
+  background: linear-gradient(to bottom, transparent 50%, map-get($map: $colors-primary, $key: dark-blue-footer) 50%);
+
+  &__card {
+    background: map-get($map: $colors-primary, $key: dark-blue-intro);
+    padding: 2.5em 2em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(black, 0.15);
+  }
+
+  &__title {
+    margin-bottom: 1em;
+  }
+
+  &__text {
+    margin-bottom: 2em;
+  }
+
+  &__email-input {
+    border: 0;
+    width: 100%;
+    padding: 1.15em 2em;
+    border-radius: 50px;
+    margin-bottom: 1.5em;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .cta {
+    &__card {
+      padding-left: 5em;
+      padding-right: 5em;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    &__text {
+      padding: 0 5em;
+    }
+
+    &__form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 0 2em;
+    }
+
+    &__email-input {
+      margin: 0;
+    }
+  }
+}

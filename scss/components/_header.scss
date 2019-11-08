@@ -1,0 +1,47 @@
+.header {
+  padding: 2em 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list-item:not(:last-of-type) {
+    margin-right: 1em;
+  }
+
+  &__logo {
+    height: 1.75rem;
+  }
+
+  &__link {
+    transition: 300ms;
+  }
+
+  &__link:hover {
+    color: map-get($map: $colors-accent, $key: cyan);
+  }
+}
+
+@include for-tablet-landscape-up {
+  .header {
+    padding: 4em 0;
+  }
+
+  .nav {
+    &__logo {
+      height: 2.5rem;
+    }
+
+    &__list-item:not(:last-of-type) {
+      margin-right: 4em;
+    }
+  }
+}

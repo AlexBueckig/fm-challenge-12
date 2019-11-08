@@ -1,0 +1,60 @@
+.example {
+  margin-bottom: 10em;
+
+  &__image {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: 1em;
+  }
+
+  &__link {
+    display: inline-block;
+    border-bottom: 1px solid map-get($map: $colors-accent, $key: cyan);
+
+    .icon {
+      height: 16px;
+      margin-bottom: -4px;
+      margin-left: 0.25em;
+
+      path {
+        fill: map-get($map: $colors-accent, $key: cyan);
+      }
+    }
+  }
+}
+
+@include for-tablet-landscape-up {
+  .example {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(4, max-content) auto;
+    grid-template-areas: 'image .' 'image title' 'image text1' 'image text2' 'image link' 'image .';
+    gap: 0 2em;
+
+    &__image {
+      grid-area: image;
+    }
+
+    &__title {
+      grid-area: title;
+      padding-right: 3em;
+    }
+
+    &__text:nth-of-type(1) {
+      grid-area: text1;
+    }
+
+    &__text:nth-of-type(2) {
+      grid-area: text2;
+    }
+
+    &__link {
+      grid-area: link;
+      justify-self: start;
+    }
+  }
+}

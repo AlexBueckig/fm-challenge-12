@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+html {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  color: $color-neutral;
+}
+
+body {
+  text-align: center;
+  background: map-get($map: $colors-primary, $key: dark-blue-intro);
+}
+
+h1,
+h2,
+nav,
+.button {
+  font-family: 'Raleway', sans-serif;
+}
+
+.button {
+  color: white;
+  font-weight: 700;
+}
+
+.nav__link,
+.footer__link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__link {
+  font-size: 0.9rem;
+}
+
+.hero__title {
+  font-size: 1.75rem;
+  line-height: 1.5;
+}
+
+.hero__subtitle {
+  line-height: 1.5;
+}
+
+.feature__title,
+.example__title {
+  font-size: 1.25rem;
+}
+
+.feature__text {
+  line-height: 1.6;
+}
+
+.example,
+.testimonials,
+.footer {
+  text-align: left;
+}
+
+.example__link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: map-get($map: $colors-accent, $key: cyan);
+  line-height: 2;
+}
+
+.testimonial__text {
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.testimonial__name {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.testimonial__job {
+  font-size: 0.6rem;
+}
+
+.cta__title {
+  font-size: 1.25rem;
+}
+
+.cta__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.cta__email-input::placeholder {
+  opacity: 0.4;
+}
+
+.footer__text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.footer__link {
+  font-size: 1.2rem;
+}
+
+@include for-tablet-landscape-up {
+  .button {
+    font-size: 1.125rem;
+  }
+
+  .button--cta {
+    font-size: 1rem;
+  }
+
+  .nav__link {
+    font-size: 1.125rem;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.625rem;
+  }
+
+  .feature__title {
+    font-size: 1.5rem;
+  }
+
+  .feature__text {
+    font-size: 1rem;
+  }
+
+  .example__title {
+    font-size: 2.75rem;
+  }
+
+  .example__link,
+  .example__text {
+    font-size: 1.125rem;
+  }
+
+  .example__text {
+    line-height: 1.7;
+  }
+
+  .testimonial__text {
+    font-size: 0.9rem;
+  }
+
+  .cta__title {
+    font-size: 2.25rem;
+  }
+
+  .cta__text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}

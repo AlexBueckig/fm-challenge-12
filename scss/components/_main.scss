@@ -1,0 +1,26 @@
+.main {
+  background: url(../images/bg-curvy-mobile.svg),
+    linear-gradient(
+      to bottom,
+      transparent calc(100vw * 0.35),
+      map-get($map: $colors-primary, $key: dark-blue-main) calc(100vw * 0.35)
+    );
+  background-size: contain;
+  background-position: center 200px;
+  background-repeat: no-repeat;
+}
+
+@include for-tablet-landscape-up {
+  .main {
+    background: url(../images/bg-curvy-desktop.svg),
+      linear-gradient(
+        to bottom,
+        transparent calc(100vw * 0.3),
+        map-get($map: $colors-primary, $key: dark-blue-main) calc(100vw * 0.3)
+      );
+    // background: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 100px;
+  }
+}

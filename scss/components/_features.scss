@@ -1,0 +1,25 @@
+.feature {
+  margin-bottom: 10em;
+
+  &:not(:last-of-type) {
+    margin-bottom: 5em;
+  }
+
+  &__image {
+    height: 60px;
+    margin-bottom: 2em;
+  }
+
+  &__title {
+    margin-bottom: 1em;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 350px));
+    gap: 10em;
+    margin: 0 auto;
+  }
+}
